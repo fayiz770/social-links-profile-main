@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --grey: hsl(0, 0%, 20%);
+    --dark-grey: hsl(0, 0%, 12%);
+    --off-black: hsl(0, 0%, 8%); 
+    --green: hsl(75, 94%, 57%);
+    --font-family: 'Inter', san-serif;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    background: var(--off-black);
+    display: flex;
+    font-family: var(--font-family);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    margin: 2em auto;
+    background: var(--dark-grey);
+    border-radius: 1em;
+    padding: 3em 2em;
+    color: white;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1em;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    text-align: center;
+}
+
+img {
+    align-self: center;
+    border-radius: 100%;
+    width: 150px;
+}
+
+h3 {
+    color: var(--green);
+}
+
+p {
+    letter-spacing: .2em;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    margin-top: 1em;
+    text-align: center;
+}
+
+.buttons button {
+    cursor: pointer;
+    color: white;
+    background: var(--grey);
+    border: none;
+    padding: 1.5em;
+    border-radius: .5em;
+    flex-grow: 1;
+    width: 100%;
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    letter-spacing: .2em;
+}
+
+.buttons button:hover,
+.buttons button:active
+ {
+    background: var(--green);
+    color: var(--grey);
+}
+
+
+@media  (max-width: 768px) {
+    main {
+        margin: 2em 1em;
+    }
+
+
+    h1 {
+        font-size: 1.5em;
+    }
+}
